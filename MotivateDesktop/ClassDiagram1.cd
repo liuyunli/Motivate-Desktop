@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MotivateDesktop.Updater">
+    <Position X="0.5" Y="0.5" Width="3.5" />
+    <NestedTypes>
+      <Enum Name="MotivateDesktop.Updater.UpdaterStatus" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Updater.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Delegate Name="MotivateDesktop.Updater.StatusUpdatedEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Updater.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Class Name="MotivateDesktop.Updater.UpdateInfo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Updater.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CEAAAAAAAJABEAAEAAAQAIAAAABAACAAQAQBQAQQJAI=</HashCode>
+      <FileName>Updater.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MotivateDesktop.WallpaperChecker">
+    <Position X="4" Y="0.5" Width="3.75" />
+    <NestedTypes>
+      <Enum Name="MotivateDesktop.WallpaperChecker.WallpaperFormats" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>WallpaperChecker.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Delegate Name="MotivateDesktop.WallpaperChecker.GotWallpaperPreviewEventHandler">
+        <TypeIdentifier>
+          <NewMemberFileName>WallpaperChecker.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="MotivateDesktop.WallpaperChecker.FailedGettingWallpaperPreviewEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>WallpaperChecker.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAEgAQAhEAAAABAAABAAIBAAAAAQAAgAENABAA=</HashCode>
+      <FileName>WallpaperChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

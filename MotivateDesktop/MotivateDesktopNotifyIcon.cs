@@ -62,11 +62,12 @@ namespace MotivateDesktop
             ShowBalloonTip("正在检测壁纸", "稍后会有提示...");
             if (!WallpaperChecker.Instance().IsChecking)
             {
-                System.Threading.Thread checkWallpaperThread = new System.Threading.Thread(new System.Threading.ThreadStart(
-                   delegate
-                   {
-                       WallpaperChecker.Instance().BeginCheckWallpaper();
-                   }
+                System.Threading.Thread checkWallpaperThread = 
+                    new System.Threading.Thread(new System.Threading.ThreadStart(
+                           delegate
+                           {
+                               WallpaperChecker.Instance().BeginCheckWallpaper();
+                           }
                  ));
                 checkWallpaperThread.Start();
             }

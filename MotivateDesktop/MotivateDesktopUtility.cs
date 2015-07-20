@@ -13,7 +13,14 @@ namespace MotivateDesktop
         public static string FormatAPIUrl = "http://api.wordsmotivate.me/WallpaperFormat.php";
         public static string WallpaperPackageDownloadUrl = "http://wordsmotivate.me/download";
         public static string GitHubProjectPageUrl = "https://github.com/YuAo/Motivate-Desktop";
+        /// <summary>
+        /// 工作目录 字段
+        /// </summary>
         public static string WorkingDirectory = getWorkingDirectory();
+        /// <summary>
+        /// 获取工作目录。如果没有，则创建。
+        /// </summary>
+        /// <returns>软件的工作目录</returns>
         private static string getWorkingDirectory()
         {
             string path = Path.GetTempPath()+"MotivateDesktop\\";
@@ -27,6 +34,10 @@ namespace MotivateDesktop
 
         public enum ScreenRatio { SixteenByTen, SixteenByNine, FourByThree, NO_MATCH }
         public static ScreenRatio MainScreenRatio = GetScreenRatio();
+        /// <summary>
+        /// 获取屏幕的长宽比
+        /// </summary>
+        /// <returns>ScreenRatio枚举值</returns>
         public static ScreenRatio GetScreenRatio()
         {
             int width = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width;
@@ -49,7 +60,9 @@ namespace MotivateDesktop
                 return ScreenRatio.NO_MATCH;
             }
         }
-
+        /// <summary>
+        /// 清除缓存
+        /// </summary>
         public static void ClearCache()
         {
             string jpgPreviewFilePath = System.IO.Path.Combine(MotivateDesktopUtility.WorkingDirectory, "preview.jpg");

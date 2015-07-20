@@ -24,23 +24,28 @@ namespace MotivateDesktop
         }
         private static string UpdateInfoXMLPath = Path.Combine(WorkingDirectory, "UpdateInfo.xml");
         private static string UpdateZipPath = Path.Combine(WorkingDirectory, "Update.zip");
-
+        /// <summary>
+        /// 升级状态
+        /// </summary>
         public enum UpdaterStatus { Idle, Checking, Downloading, ReadyToUpdate, Failed, IsUpToDate}
 
         public string NewVersion = null;
-        public UpdaterStatus CurrentStatus = UpdaterStatus.Idle;
-        public Double CurrentDownloadProgress = 0;
+        public UpdaterStatus CurrentStatus = UpdaterStatus.Idle;    //升级状态
+        public Double CurrentDownloadProgress = 0;                  //当前下载进度
 
         public delegate void StatusUpdatedEventHandler(Object sender);
         public event StatusUpdatedEventHandler StatusUpdated = null;
 
         private UpdateInfo updateInfo;
+        /// <summary>
+        /// 升级信息
+        /// </summary>
         internal class UpdateInfo
         {
-            public string VersionNumber;
-            public string DownloadUrl;
-            public string InformationUrl;
-            public string Description;
+            public string VersionNumber;    //版本好
+            public string DownloadUrl;      //下载路径
+            public string InformationUrl;   //路径信息
+            public string Description;      //描述
         }
 
         private string cachedUpdateVersion
@@ -87,7 +92,9 @@ namespace MotivateDesktop
                 }), null);
             }
         }
-
+        /// <summary>
+        /// 获取升级信息
+        /// </summary>
         private void getUpdateInfo()
         {
             try

@@ -13,6 +13,11 @@ namespace MotivateDesktop
     /// </summary>
     public partial class App : Application
     {
+
+        /// <summary>
+        /// 检查是否有其他实例在运行
+        /// </summary>
+        /// <returns>其他实例的运行进程</returns>
         private static Process OtherRunningInstance()
         {
             Process current = Process.GetCurrentProcess();
@@ -25,7 +30,7 @@ namespace MotivateDesktop
                 }
             }
             return null;
-        }
+        } 
 
         private static void OnlyAllowOneRunningInstance()
         {
